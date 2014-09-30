@@ -1,0 +1,44 @@
+<html>
+<head>
+<!-- Compiled from layout.scss -->
+<link rel="stylesheet" href="/css/layout.css" />
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//cloud.typography.com/6021852/730986/css/fonts.css" />
+</head>
+<body>
+<%= erb :'/layout/mobile-nav' %>
+<%= erb :'/layout/hero' %>
+<%= erb :'/layout/sidebar' %>
+
+<div class="container">
+<!-- Fake Recipes odd/even -->
+<%= erb :'/recipes/kelly' %>
+<%= erb :'/recipes/sadie' %>
+<%= erb :'/recipes/alison' %>
+<%= erb :'/recipes/grant' %>
+<%= erb :'/recipes/john' %>
+<%= erb :'/recipes/paula' %>
+<%= erb :'/recipes/kelley' %>
+<%= erb :'/recipes/steve' %>
+<%= erb :'/recipes/jay' %>
+<%= erb :'/recipes/gracie' %>
+<%= erb :'/recipes/lynn' %>
+<%= erb :'/recipes/mark' %>
+<%= erb :'/recipes/kara' %>
+
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/script.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.27/skrollr.min.js"></script>
+<script type="text/javascript">
+    var s = skrollr.init();
+
+    if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+    skrollr.init({
+        forceHeight: false
+    });
+}
+</script>
+</body>
+</html>

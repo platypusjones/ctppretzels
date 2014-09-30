@@ -1,0 +1,488 @@
+/* Basic Layout */
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+html,body{
+  margin:0;
+  padding:0;
+  font-family: 'Open Sans', sans-serif;
+  background:#242424;
+}
+
+.sidebar{
+  background:#242424;
+  width:300px;
+  position:absolute;
+  height:900px;
+  bottom:0px;
+  top:450px;
+  text-align:center;
+
+  .inner-menu{
+    position:absolute;
+    top:70px;
+    right:0px;
+    bottom:0px;
+    padding-bottom:70px;
+    left:0px;
+    overflow-y:scroll;
+  }
+
+  h2{
+    color:#ceaa7a;
+    font-size:25px;
+    text-transform:uppercase;
+    font-weight:300;
+    letter-spacing:1px;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  a, a:visited{
+    color:#fff;
+    text-decoration:none;
+  }
+
+  ul{
+    margin:0;
+    padding:0;
+    color:#fff;
+    font-weight:300;
+    font-size:16px;
+
+    li{
+      list-style:none;
+      padding:10px 0px;
+    }
+    li.title{
+      text-transform:uppercase;
+      font-size:18px;
+      letter-spacing:1px;
+      padding-top:30px;
+      cursor:pointer;
+    }
+  .toggle{
+    width:20px;
+    height:20px;
+    font-size:22px;
+    transition:0.25s;
+    position:relative;
+    display:inline-block;
+    }
+  .toggled{
+   -ms-transform: rotate(-45deg) scale(1.1); /* IE 9 */
+    -webkit-transform: rotate(-45deg) scale(1.1);  /* Chrome, Safari, Opera */
+    transform: rotate(-45deg) scale(1.1);
+    position:relative;
+    width:20px;
+    height:20px;
+    display:inline-block;
+    }
+
+    li.spacer{
+
+      div{
+        width:120px;
+        height:1px;
+        border-bottom:1px solid #414141;
+        padding-top:15px;
+        margin:0 auto;
+      }
+    }
+
+
+  }
+
+  @media screen and (max-width:1024px){
+    display:none;
+  }
+}
+.mobile-header{
+  display:none;
+  position:fixed;
+  top:0px;
+  height:50px;
+  width:100%;
+  background: #000;
+  color:#fff;
+  z-index:9000;
+
+  @media screen and (max-width:1024px){
+    display:block;
+  }
+}
+#navicon{
+  position:fixed;
+  top:22px;
+  left:20px;
+  z-index:90000000000;
+  display:none;
+
+  @media screen and (max-width:1024px){
+    display:block;
+  }
+}
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 4px;
+  width: 25px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -9px;
+}
+#nav-toggle span:after {
+  bottom: -9px;
+}
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  transition: all 500ms ease-in-out;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+.open{
+  display:block !important;
+}
+#mobile-overlay{
+  position:fixed;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+  background:#000;
+  z-index:1000000;
+  display:none;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+
+    .inner-menu{
+      padding-bottom:80px;
+    }
+
+    h2{
+      color:#ceaa7a;
+      font-size:25px;
+      text-transform:uppercase;
+      font-weight:300;
+      letter-spacing:1px;
+      font-family: 'Oswald', sans-serif;
+      text-align:center;
+    }
+
+    a, a:visited{
+      color:#fff;
+      text-decoration:none;
+    }
+
+    ul{
+      margin:0;
+      padding:0;
+      color:#fff;
+      font-weight:300;
+      font-size:16px;
+      text-align:center;
+
+      li{
+        list-style:none;
+        padding:10px 0px;
+      }
+      li.title{
+        text-transform:uppercase;
+        font-size:20px;
+        letter-spacing:1px;
+        padding-top:30px;
+      }
+
+      li.spacer{
+
+      div{
+          width:150px;
+          height:1px;
+          border-bottom:1px solid #414141;
+          padding-top:15px;
+          margin:0 auto;
+
+      }
+
+  }
+}
+
+}
+
+.blue{
+  color:#699ec4;
+}
+
+.red{
+  color:#ca4444;
+}
+
+.green{
+  color:#4a8a54;
+}
+
+.orange{
+  color:#ea9257;
+}
+
+
+
+#hero{
+    height:450px;
+    width:100%;
+    background-attachment:fixed;
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(240,240,240,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(240,240,240,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f0f0f0',GradientType=0 ); /* IE6-9 */
+
+    @media screen and (max-width:480px){
+      height:300px;
+      background-attachment:auto;
+  }
+
+
+  img{
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-left:-244px;
+    margin-top:-280px;
+
+    @media screen and (max-width:480px){
+      width:70%;
+      margin-left:15%;
+      left:0;
+      top:0;
+  }
+  @media screen and (max-width:1024px){
+    margin-top: -230px;
+  }
+}
+}
+.container{
+  position:absolute;
+  left:300px;
+  top:450px;
+  right:0px;
+
+    @media screen and (max-width:1024px){
+      left:0px;
+      top:450px;
+    }
+
+    @media screen and (max-width:480px){
+      top:300px;
+    }
+
+a[id]:before {
+
+    @media screen and (max-width:1024px){
+      content:"";
+      display:block;
+      height:50px;
+      margin:-30px 0 0;
+    }
+}
+
+  .recipe{
+    height:300px;
+    width:100%;
+    clear:both;
+
+      .image{
+        width:40%;
+        height:300px;
+        float:left;
+        background-position:center;
+
+        @media screen and (max-width:480px){
+          width:100%;
+        }
+      }
+      .card{
+        width:60%;
+        height:300px;
+        background:#fff;
+        float:left;
+        border-bottom:1px solid #ebebeb;
+        box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        -webkit-box-sizing:border-box;
+
+        @media screen and (max-width:480px){
+          width:100%;
+        }
+      }
+
+
+  }
+}
+
+.panel {
+    float: left;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    -webkit-perspective: 900px;
+    -moz-perspective: 900px;
+    perspective: 900px;
+
+}
+/* -- make sure to declare a default for every property that you want animated -- */
+/* -- general styles, including Y axis rotation -- */
+.panel .front {
+    float: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    width: inherit;
+    height: inherit;
+    background: #fff;
+    border-bottom:1px solid #ebebeb;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+    transform: rotateX(0deg) rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* -- transition is the magic sauce for animation -- */
+    -webkit-transition: 1s all;
+    transition: 1s all;
+}
+.panel.flip .front {
+    z-index: 900;
+    border-color: #eee;
+    background: #333;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.panel .back {
+    float: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 800;
+    width: inherit;
+    height: inherit;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-179deg);
+    /* setting to 180 causes an unnatural-looking half-flip */
+    transform: rotateY(-179deg);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* -- transition is the magic sauce for animation -- */
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.panel.flip .back {
+    z-index: 1000;
+    background:#f2f2f2;
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+    transform: rotateX(0deg) rotateY(0deg);
+
+}
+
+.ingredients{
+  width:40%;
+  display:inline-block;
+  vertical-align:top;
+  font-size:13px;
+}
+.instructions{
+  width:55%;
+  display:inline-block;
+  vertical-align:top;
+}
+
+
+.padder{
+  padding:40px;
+
+  h3{
+    text-transform:uppercase;
+    font-weight:500;
+    letter-spacing:1px;
+    font-size:17px;
+    margin:0px 0px 5px;
+  }
+  span{
+    font-weight:300;
+    font-style:italic;
+  }
+  p{
+    font-weight:300;
+    font-size:15px;
+    line-height:22px;
+    padding-bottom:15px;
+  }
+  .button{
+    padding:7px 20px;
+    font-size:14px;
+    background:#4c4c4c;
+    color:#fff;
+    text-transform:uppercase;
+    text-decoration:none;
+    font-style:normal;
+    font-weight:300;
+    letter-spacing:1px;
+    transition:0.25s;
+  }
+  .button:hover{
+    background:#ceaa7a;
+  }
+}
+
+/* -- X axis rotation for click panel -- */
+.click .front {
+    cursor: pointer;
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+.click.flip .front {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.click .back {
+    cursor: pointer;
+    -webkit-transform: rotateX(-180deg);
+    -moz-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+}
+.click.flip .back {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
